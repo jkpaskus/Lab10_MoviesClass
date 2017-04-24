@@ -1,0 +1,6 @@
+C:\Users\HP\Documents\CSharpSBS\Microsoft Press\VCSBS\Chapter 7\Classes\Lab10_MovieSorting\Lab10_MovieSorting\bin\Debug\Lab10_MovieSorting.exe.config
+C:\Users\HP\Documents\CSharpSBS\Microsoft Press\VCSBS\Chapter 7\Classes\Lab10_MovieSorting\Lab10_MovieSorting\obj\Debug\Lab10_MovieSorting.csprojResolveAssemblyReference.cache
+C:\Users\HP\Documents\CSharpSBS\Microsoft Press\VCSBS\Chapter 7\Classes\Lab10_MovieSorting\Lab10_MovieSorting\bin\Debug\Lab10_MovieSorting.exe
+C:\Users\HP\Documents\CSharpSBS\Microsoft Press\VCSBS\Chapter 7\Classes\Lab10_MovieSorting\Lab10_MovieSorting\bin\Debug\Lab10_MovieSorting.pdb
+C:\Users\HP\Documents\CSharpSBS\Microsoft Press\VCSBS\Chapter 7\Classes\Lab10_MovieSorting\Lab10_MovieSorting\obj\Debug\Lab10_MovieSorting.exe
+C:\Users\HP\Documents\CSharpSBS\Microsoft Press\VCSBS\Chapter 7\Classes\Lab10_MovieSorting\Lab10_MovieSorting\obj\Debug\Lab10_MovieSorting.pdb
