@@ -12,16 +12,20 @@ namespace Lab10_MovieSorting
         {
             Movies[] ListOfMovies = new Movies[10];
 
-            ListOfMovies[0] = new Movies("Inception", "Scifi");
-            ListOfMovies[1] = new Movies("Scarface", "Drama");
-            ListOfMovies[2] = new Movies("Moana", "Animated");
-            ListOfMovies[3] = new Movies("Secret Life of Pets", "Animated");
-            ListOfMovies[4] = new Movies("Alien", "Horror");
-            ListOfMovies[5] = new Movies("Cujo", "Horror");
-            ListOfMovies[6] = new Movies("Carrie", "Horror");
-            ListOfMovies[7] = new Movies("Saving Private Ryan", "Drama");
-            ListOfMovies[8] = new Movies("Avatar", "Scifi");
-            ListOfMovies[9] = new Movies("Despicable Me", "Animated");
+            ListOfMovies[0] = new Movies("Inception", "scifi");
+            ListOfMovies[1] = new Movies("Scarface", "drama");
+            ListOfMovies[2] = new Movies("Moana", "animated");
+            ListOfMovies[3] = new Movies("Secret Life of Pets", "animated");
+            ListOfMovies[4] = new Movies("Alien", "horror");
+            ListOfMovies[5] = new Movies("Cujo", "horror");
+            ListOfMovies[6] = new Movies("Carrie", "horror");
+            ListOfMovies[7] = new Movies("Saving Private Ryan", "drama");
+            ListOfMovies[8] = new Movies("Avatar", "scifi");
+            ListOfMovies[9] = new Movies("Despicable Me", "animated");
+
+            bool loop = true;
+
+            Console.WriteLine("welcome to the Movie List Application!\n");
 
             //Composition...entering values for movies, and cetegories
             //for (int i = 0; i < ListOfMovies.Length; i++)
@@ -29,23 +33,54 @@ namespace Lab10_MovieSorting
             //    if (ListOfMovies[i] != null)
             //        Console.WriteLine($"\t{ListOfMovies[i].MovieCategory}\n\n\n");
             //}
-
-            Console.Write("Please enter a category to search by: ");
-            string requestCategory = Console.ReadLine();
-            Console.WriteLine ($"You requested to search for {requestCategory} movies!!!");
-
-            foreach (Movies movie in ListOfMovies)
+            while (loop)
             {
-                if ( requestCategory == movie.MovieCategory )
+                Console.Write("Please enter a category to search by: ");
+                string requestCategory = Console.ReadLine();
+                Console.WriteLine($"You requested to search for {requestCategory} movies!!!");
+
+                foreach (Movies movie in ListOfMovies)
                 {
-                    Console.WriteLine($"This movie: {movie.MovieTitle}");
+                    if (requestCategory == movie.MovieCategory)
+                    {
+                        Console.WriteLine($"This movie: {movie.MovieTitle}");
+                    }
+                    //else
+                    //{
+                    //    Console.WriteLine("Nope, TRY AGAIN!");
+                    //}
                 }
-                //else
-                //{
-                //    Console.WriteLine("Nope, TRY AGAIN!");
-                //}
+
+                if (!ContinueApp())
+                    loop = false;
+            }
+        }
+
+        public static bool ContinueApp()
+        {
+            while (true)
+            {
+                Console.Write("Do you want to continue? (y/n): ");
+
+                string input = Console.ReadLine().ToLower();
+
+                if (input == "y")
+                {
+                    //Console.WriteLine();
+                    return true;
+                }
+                else if (input == "n")
+                {
+                    return false;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Error: Input not y or n. \n");
+                    Console.ForegroundColor = ConsoleColor.White;
+                }
             }
         }
     }
-    }
+}
 
